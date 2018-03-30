@@ -61,6 +61,9 @@ streamlined, syntactically consistent replacement for the venerable
   <dd>Prints the range with line numbers. The current address is set to the 
   last line printed.</dd>
 
+  <dt>p <em>range</em></dt>
+  <dd>Prints the range. The current address is set to the last line printed.</dd>
+
   <dt>q</dt>
   <dd>Quits **ALE**.</dd>
 
@@ -89,7 +92,7 @@ streamlined, syntactically consistent replacement for the venerable
 | .                       | _             | Current line
 | (.)a                    |               | Not yet implemented
 | (.,.)c                  |               | Not yet implemented
-| (.,.)d                  | d (.,.)       | 
+| (.,.)d                  | d range       | 
 | e file                  | e 'file'      | 
 | e !command              |               | Not yet implemented
 | E file                  | E 'file'      |
@@ -104,8 +107,8 @@ streamlined, syntactically consistent replacement for the venerable
 | (.)k lc                 |               | Not yet implemented
 | (.,.)l                  |               | Not yet implemented
 | (.,.)m(.)               |               | Not yet implemented
-| (.,.)n                  | n (.,.)       | Not yet implemented
-| (.,.)p                  |               | Not yet implemented
+| (.,.)n                  | n range       | Not yet implemented
+| (.,.)p                  | p range       | Not yet implemented
 | P                       | N/A           | APL session prompt is used
 | q                       | q             | 
 | Q                       | )off          | 
