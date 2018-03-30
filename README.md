@@ -61,6 +61,10 @@ streamlined, syntactically consistent replacement for the venerable
   <dt>(1,≢∆)wq <em>file</em></dt>
   <dd>Writes buffer to <em>file</em> as with <strong>w</strong> and then executes
   the <strong>q</strong> command.</dd>
+
+  <dt>(_+1)z <em>n</em></dt>
+  <dd>Scrolls <em>n</em> lines at a time starting at the addressed line. 
+  The current address is set to the last line printed.</dd>
 </dl>
 
 # COMPARING ED(1) TO ALE
@@ -104,7 +108,7 @@ streamlined, syntactically consistent replacement for the venerable
 | (1,$)wq file            | (1,≢∆)wq file | Use ⍙ for default file
 | (1,$)w !command         |               | Not yet implemented
 | (1,$)W file             |               | Not yet implemented
-| (.+1)z n                |               | Not yet implemented
+| (.+1)z n                | (_+1)z n      | 
 | ($)=                    | N/A           | Ranges print themselves
 | (.+1)newline            | N/A           | Use z instead
 | !command                |               | Not yet implemented
