@@ -47,6 +47,10 @@ streamlined, syntactically consistent replacement for the venerable
   <dd>Appends text to the buffer after the addressed line. Input mode is used 
   to enter text. The current address is set to the last line entered.</dd>
 
+  <dt>c <em>range</em></dt>
+  <dd>Change the addressed range in the buffer. Replacement text is entered
+  in input mode. The current address is set to the last line entered.</dd>
+
   <dt>d <em>range</em></dt>
   <dd>Deletes the addressed lines and sets the current address to the line 
   after the deleted line if there is one, or to the line before the deleted 
@@ -95,7 +99,7 @@ streamlined, syntactically consistent replacement for the venerable
 | ----------------------- | ------------- | --------
 | .                       | _             | Current line
 | (.)a                    | a line        | 
-| (.,.)c                  |               | Not yet implemented
+| (.,.)c                  | c range       | 
 | (.,.)d                  | d range       | 
 | e file                  | e 'file'      | 
 | e !command              |               | Not yet implemented
