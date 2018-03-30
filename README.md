@@ -105,8 +105,8 @@ streamlined, syntactically consistent replacement for the venerable
 | (1,$)w !command         |               | Not yet implemented
 | (1,$)W file             |               | Not yet implemented
 | (.+1)z n                |               | Not yet implemented
-| ($)=                    | _             | 
-| (.+1)newline            |               | Not yet implemented
+| ($)=                    | N/A           | Ranges print themselves
+| (.+1)newline            | N/A           | Use z instead
 | !command                |               | Not yet implemented
 
 # TIPS AND TRICKS
