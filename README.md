@@ -107,8 +107,8 @@ streamlined, syntactically consistent replacement for the venerable
 | (.)k lc                 |               | Not yet implemented
 | (.,.)l                  |               | Not yet implemented
 | (.,.)m(.)               |               | Not yet implemented
-| (.,.)n                  | n range       | Not yet implemented
-| (.,.)p                  | p range       | Not yet implemented
+| (.,.)n                  | n range       | 
+| (.,.)p                  | p range       | 
 | P                       | N/A           | APL session prompt is used
 | q                       | q             | 
 | Q                       | )off          | 
