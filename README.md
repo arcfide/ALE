@@ -51,53 +51,63 @@ streamlined, syntactically consistent replacement for the venerable
   <dt>E <em>file</em></dt>
   <dd>Unconditionally edits <em>file</em>. This is like <strong>e</strong> but 
   it will erase a dirty buffer without warning.</dd>
+
+  <dt>(1,≢∆)w <em>file</em></dt>
+  <dd>Writes the addressed lines to <em>file</em>. Previous contents of 
+  <em>file</em> are clobbered without warning. If there is no default filename, 
+  then the default filename will be set to <em>file</em>, otherwise it is not 
+  changed.</dd>
+
+  <dt>(1,≢∆)wq <em>file</em></dt>
+  <dd>Writes buffer to <em>file</em> as with <strong>w</strong> and then executes
+  the <strong>q</strong> command.</dd>
 </dl>
 
 # COMPARING ED(1) TO ALE
 
-| ed(1)                   | ALE      | Comments
-| ----------------------- | -------- | --------
-| .                       | _        | Current line
-| (.)a                    |          | Not yet implemented
-| (.,.)c                  |          | Not yet implemented
-| (.,.)d                  |          | Not yet implemented
-| e file                  | e 'file' | 
-| e !command              |          | Not yet implemented
-| E file                  | E 'file' |
-| f                       | ⍙        | Prints default filename
-| f file                  | ⍙←'file' | Sets default filename
-| (1,$)g/re/command-list  |          | Not yet implemented
-| (1,$)G/re/              |          | Not yet implemented
-| H                       | N/A      | **ALE** errors are more verbose
-| h                       | N/A      | See H
-| (.)i                    |          | Not yet implemented
-| (.,.+1)j                |          | Not yet implemented
-| (.)k lc                 |          | Not yet implemented
-| (.,.)l                  |          | Not yet implemented
-| (.,.)m(.)               |          | Not yet implemented
-| (.,.)n                  |          | Not yet implemented
-| (.,.)p                  |          | Not yet implemented
-| P                       | N/A      | APL session prompt is used
-| q                       | q        | Not yet implemented
-| Q                       | )off     | 
-| ($)r file               |          | Not yet implemented
-| ($)r !command           |          | Not yet implemented
-| (.,.)s/re/replacement/  |          | Not yet implemented
-| (.,.)s/re/replacement/g |          | Not yet implemented
-| (.,.)s/re/replacement/n |          | Not yet implemented
-| (.,.)s                  |          | Not yet implemented
-| (.,.)t(.)               |          | Not yet implemented
-| u                       |          | Not yet implemented
-| (1,$)v/re/command-list  |          | Not yet implemented
-| (1,$)V/re/              |          | Not yet implemented
-| (1,$)w file             |          | Not yet implemented
-| (1,$)wq file            |          | Not yet implemented
-| (1,$)w !command         |          | Not yet implemented
-| (1,$)W file             |          | Not yet implemented
-| (.+1)z n                |          | Not yet implemented
-| ($)=                    | _        | 
-| (.+1)newline            |          | Not yet implemented
-| !command                |          | Not yet implemented
+| ed(1)                   | ALE           | Comments
+| ----------------------- | ------------- | --------
+| .                       | _             | Current line
+| (.)a                    |               | Not yet implemented
+| (.,.)c                  |               | Not yet implemented
+| (.,.)d                  |               | Not yet implemented
+| e file                  | e 'file'      | 
+| e !command              |               | Not yet implemented
+| E file                  | E 'file'      |
+| f                       | ⍙             | Prints default filename
+| f file                  | ⍙←'file'      | Sets default filename
+| (1,$)g/re/command-list  |               | Not yet implemented
+| (1,$)G/re/              |               | Not yet implemented
+| H                       | N/A           | **ALE** errors are more verbose
+| h                       | N/A           | See H
+| (.)i                    |               | Not yet implemented
+| (.,.+1)j                |               | Not yet implemented
+| (.)k lc                 |               | Not yet implemented
+| (.,.)l                  |               | Not yet implemented
+| (.,.)m(.)               |               | Not yet implemented
+| (.,.)n                  |               | Not yet implemented
+| (.,.)p                  |               | Not yet implemented
+| P                       | N/A           | APL session prompt is used
+| q                       | q             | 
+| Q                       | )off          | 
+| ($)r file               |               | Not yet implemented
+| ($)r !command           |               | Not yet implemented
+| (.,.)s/re/replacement/  |               | Not yet implemented
+| (.,.)s/re/replacement/g |               | Not yet implemented
+| (.,.)s/re/replacement/n |               | Not yet implemented
+| (.,.)s                  |               | Not yet implemented
+| (.,.)t(.)               |               | Not yet implemented
+| u                       |               | Not yet implemented
+| (1,$)v/re/command-list  |               | Not yet implemented
+| (1,$)V/re/              |               | Not yet implemented
+| (1,$)w file             | (1,≢∆)w file  | Use ⍙ for default file
+| (1,$)wq file            | (1,≢∆)wq file | Use ⍙ for default file
+| (1,$)w !command         |               | Not yet implemented
+| (1,$)W file             |               | Not yet implemented
+| (.+1)z n                |               | Not yet implemented
+| ($)=                    | _             | 
+| (.+1)newline            |               | Not yet implemented
+| !command                |               | Not yet implemented
 
 # TIPS AND TRICKS
 
