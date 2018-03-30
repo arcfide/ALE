@@ -43,7 +43,7 @@ streamlined, syntactically consistent replacement for the venerable
 # COMMMANDS
 
 <dl>
-  <dt>d (.,.)</dt>
+  <dt>d <em>range</em></dt>
   <dd>Deletes the addressed lines and sets the current address to the line 
   after the deleted line if there is one, or to the line before the deleted 
   range if there is not.</dd>
@@ -56,6 +56,16 @@ streamlined, syntactically consistent replacement for the venerable
   <dt>E <em>file</em></dt>
   <dd>Unconditionally edits <em>file</em>. This is like <strong>e</strong> but 
   it will erase a dirty buffer without warning.</dd>
+
+  <dt>n <em>range</em></dt>
+  <dd>Prints the range with line numbers. The current address is set to the 
+  last line printed.</dd>
+
+  <dt>q</dt>
+  <dd>Quits **ALE**.</dd>
+
+  <dt>Q</dt>
+  <dd>Quites **ALE** unconditionally.</dd>
 
   <dt>(1,≢∆)w <em>file</em></dt>
   <dd>Writes the addressed lines to <em>file</em>. Previous contents of 
@@ -94,7 +104,7 @@ streamlined, syntactically consistent replacement for the venerable
 | (.)k lc                 |               | Not yet implemented
 | (.,.)l                  |               | Not yet implemented
 | (.,.)m(.)               |               | Not yet implemented
-| (.,.)n                  |               | Not yet implemented
+| (.,.)n                  | n (.,.)       | Not yet implemented
 | (.,.)p                  |               | Not yet implemented
 | P                       | N/A           | APL session prompt is used
 | q                       | q             | 
