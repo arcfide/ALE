@@ -43,6 +43,11 @@ streamlined, syntactically consistent replacement for the venerable
 # COMMMANDS
 
 <dl>
+  <dt>d (.,.)</dt>
+  <dd>Deletes the addressed lines and sets the current address to the line 
+  after the deleted line if there is one, or to the line before the deleted 
+  range if there is not.</dd>
+
   <dt>e <em>file</em></dt>
   <dd>Edits <em>file</em> and sets the default filename. Clears and replaces 
   the existing edit buffer. The current address is set to the last line read.
@@ -74,7 +79,7 @@ streamlined, syntactically consistent replacement for the venerable
 | .                       | _             | Current line
 | (.)a                    |               | Not yet implemented
 | (.,.)c                  |               | Not yet implemented
-| (.,.)d                  |               | Not yet implemented
+| (.,.)d                  | d (.,.)       | 
 | e file                  | e 'file'      | 
 | e !command              |               | Not yet implemented
 | E file                  | E 'file'      |
