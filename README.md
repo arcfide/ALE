@@ -65,6 +65,10 @@ streamlined, syntactically consistent replacement for the venerable
   <dd>Unconditionally edits <em>file</em>. This is like <strong>e</strong> but 
   it will erase a dirty buffer without warning.</dd>
 
+  <dt>i <em>line</em></dt>
+  <dd>Insert text before the addressed line. Text is entered in input mode.
+  The current address is set to the last line entered.</dd>
+
   <dt>n <em>range</em></dt>
   <dd>Prints the range with line numbers. The current address is set to the 
   last line printed.</dd>
@@ -110,7 +114,7 @@ streamlined, syntactically consistent replacement for the venerable
 | (1,$)G/re/              |               | Not yet implemented
 | H                       | N/A           | **ALE** errors are more verbose
 | h                       | N/A           | See H
-| (.)i                    |               | Not yet implemented
+| (.)i                    | i line        | 
 | (.,.+1)j                |               | Not yet implemented
 | (.)k lc                 |               | Not yet implemented
 | (.,.)l                  |               | Not yet implemented
