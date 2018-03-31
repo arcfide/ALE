@@ -79,6 +79,11 @@ streamlined, syntactically consistent replacement for the venerable
   containing the joined lines. The current address is set to the joined
   line.</dd>
 
+  <dt><em>line</em> k <em>string</em></dt>
+  <dd>Marks the addressed line with the given <em>string</em>. Deleting or 
+  modifying the line will result in that mark being deleted. Commands that 
+  support it may use <em>string</em> in place of a line number.</dd>
+
   <dt>n <em>range</em></dt>
   <dd>Prints the range with line numbers. The current address is set to the 
   last line printed.</dd>
@@ -126,7 +131,7 @@ streamlined, syntactically consistent replacement for the venerable
 | h                       | N/A           | See H
 | (.)i                    | i line        | 
 | (.,.+1)j                | j range       | 
-| (.)k lc                 |               | Not yet implemented
+| (.)k lc                 | line k string | 
 | (.,.)l                  |               | Not yet implemented
 | (.,.)m(.)               |               | Not yet implemented
 | (.,.)n                  | n range       | 
