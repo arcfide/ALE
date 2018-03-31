@@ -69,6 +69,11 @@ streamlined, syntactically consistent replacement for the venerable
   <dd>Insert text before the addressed line. Text is entered in input mode.
   The current address is set to the last line entered.</dd>
 
+  <dt>j <em>range</em></dt>
+  <dd>Joins the addressed range. The range is replaced with a single line
+  containing the joined lines. The current address is set to the joined
+  line.</dd>
+
   <dt>n <em>range</em></dt>
   <dd>Prints the range with line numbers. The current address is set to the 
   last line printed.</dd>
@@ -115,7 +120,7 @@ streamlined, syntactically consistent replacement for the venerable
 | H                       | N/A           | **ALE** errors are more verbose
 | h                       | N/A           | See H
 | (.)i                    | i line        | 
-| (.,.+1)j                |               | Not yet implemented
+| (.,.+1)j                | j range       | 
 | (.)k lc                 |               | Not yet implemented
 | (.,.)l                  |               | Not yet implemented
 | (.,.)m(.)               |               | Not yet implemented
