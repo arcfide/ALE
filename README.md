@@ -61,6 +61,11 @@ streamlined, syntactically consistent replacement for the venerable
   the existing edit buffer. The current address is set to the last line read.
   </dd>
 
+  <dt>efn <em>expr</em></dt>
+  <dd>Edits the vector of strings returned by <em>expr</em>. The current 
+  address is set to the last line read. This function replaces the use of 
+  the shell commands with APL expressions.</dd>
+
   <dt>E <em>file</em></dt>
   <dd>Unconditionally edits <em>file</em>. This is like <strong>e</strong> but 
   it will erase a dirty buffer without warning.</dd>
@@ -111,7 +116,7 @@ streamlined, syntactically consistent replacement for the venerable
 | (.,.)c                  | c range       | 
 | (.,.)d                  | d range       | 
 | e file                  | e 'file'      | 
-| e !command              |               | Not yet implemented
+| e !command              | efn expr      | Use APL, not *sh(1)*, expr must return vector of strings
 | E file                  | E 'file'      |
 | f                       | ⍙             | Prints default filename
 | f file                  | ⍙←'file'      | Sets default filename
@@ -141,12 +146,12 @@ streamlined, syntactically consistent replacement for the venerable
 | (1,$)V/re/              |               | Not yet implemented
 | (1,$)w file             | (1,≢∆)w file  | Use ⍙ for default file
 | (1,$)wq file            | (1,≢∆)wq file | Use ⍙ for default file
-| (1,$)w !command         |               | Not yet implemented
+| (1,$)w !command         | fn ∆          | Apply APL function to buffer
 | (1,$)W file             |               | Not yet implemented
 | (.+1)z n                | (_+1)z n      | 
 | ($)=                    | N/A           | Ranges print themselves
 | (.+1)newline            | N/A           | Use z instead
-| !command                |               | Not yet implemented
+| !command                | ⎕SH 'command' | See Dyalog Documentation on ⎕SH
 
 # TIPS AND TRICKS
 
