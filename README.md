@@ -84,6 +84,10 @@ streamlined, syntactically consistent replacement for the venerable
   modifying the line will result in that mark being deleted. Commands that 
   support it may use <em>string</em> in place of a line number.</dd>
 
+  <dt><em>range</em> m <em>line</em></dt>
+  <dd>Moves the addressed range to right after the addressed line. The current
+  address is set to the last line moved.</dd>
+
   <dt>n <em>range</em></dt>
   <dd>Prints the range with line numbers. The current address is set to the 
   last line printed.</dd>
@@ -133,7 +137,7 @@ streamlined, syntactically consistent replacement for the venerable
 | (.,.+1)j                | j range       | 
 | (.)k lc                 | line k string | 
 | (.,.)l                  |               | Not yet implemented
-| (.,.)m(.)               |               | Not yet implemented
+| (.,.)m(.)               | range m line  | 
 | (.,.)n                  | n range       | 
 | (.,.)p                  | p range       | 
 | P                       | N/A           | APL session prompt is used
