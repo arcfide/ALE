@@ -101,6 +101,17 @@ streamlined, syntactically consistent replacement for the venerable
   <dt>Q</dt>
   <dd>Quites **ALE** unconditionally.</dd>
 
+  <dt><em>line</em> r <em>file</em></dt>
+  <dd>Read file into the buffer after line. Sets the default filename to file 
+  if there was no default filename already set. Sets the current address to the 
+  last line read.</dd>
+
+  <dt><em>line</em> r <em>expr</em></dt>
+  <dd>Works the same way as the <strong>r</strong> command with a filename, but 
+  if the right argument to <strong>r</strong> is a vector of strings, then this 
+  will be used as the contents to read into the buffer. It does not set the 
+  filename, and the current address is set to the last line read.</dd>
+
   <dt>(1,≢∆)w <em>file</em></dt>
   <dd>Writes the addressed lines to <em>file</em>. Previous contents of 
   <em>file</em> are clobbered without warning. If there is no default filename, 
@@ -143,8 +154,8 @@ streamlined, syntactically consistent replacement for the venerable
 | P                       | N/A           | APL session prompt is used
 | q                       | q             | 
 | Q                       | )off          | 
-| ($)r file               |               | Not yet implemented
-| ($)r !command           |               | Not yet implemented
+| ($)r file               | line r file   | 
+| ($)r !command           | line r expr   | `expr` must return vector of strings
 | (.,.)s/re/replacement/  |               | Not yet implemented
 | (.,.)s/re/replacement/g |               | Not yet implemented
 | (.,.)s/re/replacement/n |               | Not yet implemented
