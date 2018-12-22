@@ -119,6 +119,16 @@ streamlined, syntactically consistent replacement for the venerable
   will be used as the contents to read into the buffer. It does not set the 
   filename, and the current address is set to the last line read.</dd>
 
+  <dt>(_,_)s <em>pat</em> <em>rep</em> <em>pos</em></dt>
+  <dd>Performs regex substitution. The <em>pat</em> value is a string 
+  containing the regex to match against. The <em>rep</em> string is a 
+  regex replacement pattern. The optional <em>pos</em> argument indicates
+  how many replacements to do, the default being 0, meaning all possible 
+  replacements. If a non-zero, positive value <em>n</em> is given, then 
+  only the first <em>n</em> values will be replaced per line. If a negative
+  value <em>-n</em> is given, then only the specific <em>n</em>th value will 
+  be replaced. The current line is set to the last line that was modified.</dd>
+
   <dt>(1,≢∆)w <em>file</em></dt>
   <dd>Writes the addressed lines to <em>file</em>. Previous contents of 
   <em>file</em> are clobbered without warning. If there is no default filename, 
@@ -167,10 +177,10 @@ streamlined, syntactically consistent replacement for the venerable
 | Q                       | )off          | 
 | ($)r file               | line r file   | 
 | ($)r !command           | line r expr   | `expr` must return vector of strings
-| (.,.)s/re/replacement/  |               | Not yet implemented
-| (.,.)s/re/replacement/g |               | Not yet implemented
-| (.,.)s/re/replacement/n |               | Not yet implemented
-| (.,.)s                  |               | Not yet implemented
+| (.,.)s/re/replacement/  | (_,_)s 're' 'replacement' 1  |
+| (.,.)s/re/replacement/g | (_,_)s 're' 'replacement'    |
+| (.,.)s/re/replacement/n | (_,_)s 're' 'replacement' ¯n | 
+| (.,.)s                  | N/A                          | Use the history mechanism
 | (.,.)t(.)               |               | Not yet implemented
 | u                       |               | Not yet implemented
 | (1,$)v/re/command-list  |               | Not yet implemented
