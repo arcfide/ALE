@@ -178,7 +178,7 @@ streamlined, syntactically consistent replacement for the venerable
 | (1,$)w file             | (1,≢∆)w file  | Use ⍙ for default file
 | (1,$)wq file            | (1,≢∆)wq file | Use ⍙ for default file
 | (1,$)w !command         | fn ∆          | Apply APL function to buffer
-| (1,$)W file             |               | Not yet implemented
+| (1,$)W file             | (1,≢∆)W file  | Use ⍙ for default file
 | (.+1)z n                | (_+1)z n      | 
 | ($)=                    | N/A           | Ranges print themselves
 | (.+1)newline            | N/A           | Use z instead
