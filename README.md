@@ -40,6 +40,13 @@ streamlined, syntactically consistent replacement for the venerable
 
 # LINE ADDRESSING
 
+<dl>
+  <dt>_a</dt>
+  <dd>Equivalent to `1,≢∆`.</dd>
+  <dt>_s <em>regex</em></dt>
+  <dd>Gives the next line matching <em>regex</em> with wraparound.</dd>
+</dl>
+
 # COMMMANDS
 
 <dl>
@@ -121,6 +128,10 @@ streamlined, syntactically consistent replacement for the venerable
   <dt>(1,≢∆)wq <em>file</em></dt>
   <dd>Writes buffer to <em>file</em> as with <strong>w</strong> and then executes
   the <strong>q</strong> command.</dd>
+
+  <dt>(1,≢∆)W <em>file</em></dt>
+  <dd>Works like the `w` command but appends to the end of the file 
+  instead of overwriting the file.</dd>
 
   <dt>(_+1)z <em>n</em></dt>
   <dd>Scrolls <em>n</em> lines at a time starting at the addressed line. 
