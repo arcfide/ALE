@@ -152,6 +152,15 @@ streamlined, syntactically consistent replacement for the venerable
   <dd>Transfers (copies) the addressed range to right after the addressed 
   lines. Current address is set to the last line transferred.</dd>
 
+  <dt>(1,≢∆){...}v 're'</dt>
+  <dd>Does the same thing as the `g` command but applies the 
+  function to lines that do *not* match 're' instead of those 
+  that do.</dd>
+
+  <dt>(1,≢∆)V 're'</dt>
+  <dd>Behaves like `V`, but like the `v` command, it operates on the 
+  not matching lines, rather than the matching lines.</dd>
+
   <dt>(1,≢∆)w <em>file</em></dt>
   <dd>Writes the addressed lines to <em>file</em>. Previous contents of 
   <em>file</em> are clobbered without warning. If there is no default filename, 
@@ -206,8 +215,8 @@ streamlined, syntactically consistent replacement for the venerable
 | (.,.)s                  | N/A                          | Use the history mechanism
 | (.,.)t(.)               | range t line | 
 | u                       |               | Not yet implemented
-| (1,$)v/re/command-list  |               | Not yet implemented
-| (1,$)V/re/              |               | Not yet implemented
+| (1,$)v/re/command-list  | range {...}v 're' | 
+| (1,$)V/re/              | range V 're' | 
 | (1,$)w file             | (1,≢∆)w file  | Use ⍙ for default file
 | (1,$)wq file            | (1,≢∆)wq file | Use ⍙ for default file
 | (1,$)w !command         | fn ∆          | Apply APL function to buffer
