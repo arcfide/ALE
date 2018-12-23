@@ -106,6 +106,10 @@ streamlined, syntactically consistent replacement for the venerable
   modifying the line will result in that mark being deleted. Commands that 
   support it may use <em>string</em> in place of a line number.</dd>
 
+  <dt>l <em>range</em></dt>
+  <dd>Print the addressed lines unambiguously. Otherwise works like the 
+  `p` command.</dd>
+
   <dt><em>range</em> m <em>line</em></dt>
   <dd>Moves the addressed range to right after the addressed line. The current
   address is set to the last line moved.</dd>
@@ -183,7 +187,7 @@ streamlined, syntactically consistent replacement for the venerable
 | (.)i                    | i line        | 
 | (.,.+1)j                | j range       | 
 | (.)k lc                 | line k string | 
-| (.,.)l                  |               | Not yet implemented
+| (.,.)l                  | l range | 
 | (.,.)m(.)               | range m line  | 
 | (.,.)n                  | n range       | 
 | (.,.)p                  | p range       | 
