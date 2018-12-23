@@ -77,6 +77,14 @@ streamlined, syntactically consistent replacement for the venerable
   <dd>Unconditionally edits <em>file</em>. This is like <strong>e</strong> but 
   it will erase a dirty buffer without warning.</dd>
 
+  <dt>(1,≢∆){...}g 're'</dt>
+  <dd>Applies the function `{...}` to the addressed lines matching 
+  regular expression `'re'`. For each match, the function is applied once 
+  after setting the current line to the matching line. The right argument 
+  to the function is the line number of the match. The line number is set 
+  to the last line modified by one of the commands issued inside of the 
+  function.</dd>
+
   <dt>i <em>line</em></dt>
   <dd>Insert text before the addressed line. Text is entered in input mode.
   The current address is set to the last line entered.</dd>
@@ -161,7 +169,7 @@ streamlined, syntactically consistent replacement for the venerable
 | E file                  | E 'file'      |
 | f                       | ⍙             | Prints default filename
 | f file                  | ⍙←'file'      | Sets default filename
-| (1,$)g/re/command-list  |               | Not yet implemented
+| (1,$)g/re/command-list  | (1,≢∆){...}g're' | ⍵ is _ for each match
 | (1,$)G/re/              |               | Not yet implemented
 | H                       | N/A           | **ALE** errors are more verbose
 | h                       | N/A           | See H
