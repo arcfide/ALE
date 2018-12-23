@@ -40,11 +40,27 @@ streamlined, syntactically consistent replacement for the venerable
 
 # LINE ADDRESSING
 
+Lines are origin-1 based references to lines in a file, with the 0th
+line referencing the line before the first line in a file. Address 
+ranges are a pair of lines where the first line must be less than or equal 
+to the second line. They specify a contiguous region of lines in a file.
+
+Traditional <em>ed(1)</em> had a number of different addressing shortcuts. 
+We do not have any of that in ALE at the moment, and instead prefer to 
+rely on the fact that we have full arithmetic expressive power through 
+APL. This means that the number of built-in addressing short cuts is 
+relatively limited. Instead, you should simply write an APL expression 
+to give you the appropriate range if you should want it. 
+
 <dl>
+  <dt>_</dt>
+  <dd>The address of the current line.</dd>
   <dt>_a</dt>
   <dd>Equivalent to `1,≢∆`.</dd>
   <dt>_s <em>regex</em></dt>
   <dd>Gives the next line matching <em>regex</em> with wraparound.</dd>
+  <dt>_r <em>regex</em></dt>
+  <dd>Gives the previous line matching <em>regex</em> with wraparound.</dd>
 </dl>
 
 # COMMMANDS
