@@ -174,7 +174,7 @@ to give you the appropriate range if you should want it.
   that do.</dd>
 
   <dt>(1,≢∆)V 're'</dt>
-  <dd>Behaves like `V`, but like the `v` command, it operates on the 
+  <dd>Behaves like `G`, but like the `v` command, it operates on the 
   not matching lines, rather than the matching lines.</dd>
 
   <dt>(1,≢∆)w <em>file</em></dt>
