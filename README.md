@@ -177,7 +177,7 @@ streamlined, syntactically consistent replacement for the venerable
 | f                       | ⍙             | Prints default filename
 | f file                  | ⍙←'file'      | Sets default filename
 | (1,$)g/re/command-list  | (1,≢∆){...}g're' | ⍵ is _ for each match
-| (1,$)G/re/              | (1,≢∆)G're' | Not yet implemented
+| (1,$)G/re/              | (1,≢∆)G're' | 
 | H                       | N/A           | **ALE** errors are more verbose
 | h                       | N/A           | See H
 | (.)i                    | i line        | 
