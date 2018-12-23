@@ -85,6 +85,13 @@ streamlined, syntactically consistent replacement for the venerable
   to the last line modified by one of the commands issued inside of the 
   function.</dd>
 
+  <dt>(1,≢∆)G 're'</dt>
+  <dd>Works much like the `g` command except that it prompts 
+  interactively for the commands to run. It does this for each matching 
+  line by first printing the line that matches, and then prompting with 
+  the evaluator to ask for the next commands to run. The format of the 
+  commands must be suitable for execution by the `eval` function.</dd>
+
   <dt>i <em>line</em></dt>
   <dd>Insert text before the addressed line. Text is entered in input mode.
   The current address is set to the last line entered.</dd>
@@ -170,7 +177,7 @@ streamlined, syntactically consistent replacement for the venerable
 | f                       | ⍙             | Prints default filename
 | f file                  | ⍙←'file'      | Sets default filename
 | (1,$)g/re/command-list  | (1,≢∆){...}g're' | ⍵ is _ for each match
-| (1,$)G/re/              |               | Not yet implemented
+| (1,$)G/re/              | (1,≢∆)G're' | Not yet implemented
 | H                       | N/A           | **ALE** errors are more verbose
 | h                       | N/A           | See H
 | (.)i                    | i line        | 
