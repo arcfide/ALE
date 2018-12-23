@@ -148,6 +148,10 @@ streamlined, syntactically consistent replacement for the venerable
   value <em>-n</em> is given, then only the specific <em>n</em>th value will 
   be replaced. The current line is set to the last line that was modified.</dd>
 
+  <dt>(1,≢∆)t <em>line</em></dt>
+  <dd>Transfers (copies) the addressed range to right after the addressed 
+  lines. Current address is set to the last line transferred.</dd>
+
   <dt>(1,≢∆)w <em>file</em></dt>
   <dd>Writes the addressed lines to <em>file</em>. Previous contents of 
   <em>file</em> are clobbered without warning. If there is no default filename, 
@@ -200,7 +204,7 @@ streamlined, syntactically consistent replacement for the venerable
 | (.,.)s/re/replacement/g | (_,_)s 're' 'replacement'    |
 | (.,.)s/re/replacement/n | (_,_)s 're' 'replacement' ¯n | 
 | (.,.)s                  | N/A                          | Use the history mechanism
-| (.,.)t(.)               |               | Not yet implemented
+| (.,.)t(.)               | range t line | 
 | u                       |               | Not yet implemented
 | (1,$)v/re/command-list  |               | Not yet implemented
 | (1,$)V/re/              |               | Not yet implemented
