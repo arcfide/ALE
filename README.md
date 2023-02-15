@@ -168,6 +168,12 @@ to give you the appropriate range if you should want it.
   <dd>Transfers (copies) the addressed range to right after the addressed 
   lines. Current address is set to the last line transferred.</dd>
 
+  <dt>u</dt>
+  <dd>Undoes the effect of the last command that modified anything in the buffer
+  and restores the current address to what it was before the command. The
+  global commands 'g', 'G', 'v', and 'V' are treated as a single command by
+  undo. 'u' is its own inverse; it can undo only the last command.</dd>
+
   <dt>(1,≢∆){...}v 're'</dt>
   <dd>Does the same thing as the `g` command but applies the 
   function to lines that do *not* match 're' instead of those 
