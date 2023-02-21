@@ -202,6 +202,12 @@ to give you the appropriate range if you should want it.
   The current address is set to the last line printed.</dd>
 </dl>
 
+**NOTE**: For any of the regex-consuming commands above—namely *_r*, *_s*,
+*s*, *g*, and *v*—supplying the null regex `''` is equivalent to supplying the
+previously-used regex. This "regex history" is shared among all the commands
+and is initialized to the null regex.
+
+
 # COMPARING ED(1) TO ALE
 
 | ed(1)                   | ALE           | Comments
